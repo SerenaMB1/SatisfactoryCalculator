@@ -21,15 +21,18 @@ struct CalculatorView: View {
                     .background(.ultraThinMaterial)
                 Text("Selected Item: \(selectedRecipe)")
                 Spacer()
-                Picker("Select a color", selection: $selectedRecipe) {
-                    let recipeNameRange = 0..<purpleDataVm.recipeNames.count
+                Picker("Select a recipe", selection: $selectedRecipe) {
+                    let recipeNameRange = 0 ..< purpleDataVm.recipeNames.count
                     ForEach(recipeNameRange) { index in
                         Text(purpleDataVm.recipeNames[index])
                     }.pickerStyle(WheelPickerStyle())
+                        .font(.subheadline)
                 }
             }
-            .navigationBarTitle(Text("The Satisfactory Calculator"))
-            .preferredColorScheme(ColorScheme.dark)
+            .navigationBarTitle(Text("Satisfactory Calculator"), displayMode: .inline)
+            .foregroundColor(.orange)
+            
+            //.preferredColorScheme(ColorScheme.dark)
                 
         }
     }
