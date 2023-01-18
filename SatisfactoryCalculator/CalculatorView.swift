@@ -17,7 +17,7 @@ struct CalculatorView: View {
         NavigationView {
             VStack {
                 Rectangle()
-                    .frame(height: 0)
+                    .frame(height: 1)
                     .background(.ultraThinMaterial)
                 Text("Selected Item: \(selectedRecipe)")
                 Spacer()
@@ -30,12 +30,10 @@ struct CalculatorView: View {
                 }
             }
             .navigationBarTitle(Text("Satisfactory Calculator"), displayMode: .inline)
-            .foregroundColor(.orange)
-            
-            //.preferredColorScheme(ColorScheme.dark)
-                
         }
+        .colorMultiply(.orange)
     }
+        
 }
 
 struct CalculatorView_Previews: PreviewProvider {
