@@ -4,6 +4,7 @@
 target 'SatisfactoryCalculator' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
+  pod 'MockingbirdFramework', '~> 0.20'
 
   # Pods for SatisfactoryCalculator
 
